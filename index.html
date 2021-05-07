@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CALCULADORA</h1>
+    </header>
+    <section>
+        <div id="divoutput" contenteditable = "true">
+            X<sup id="out">X*5412</sup>
+        </div>
+        <div id="teclado">
+            <table id="calc">
+                <tr>
+                    <th><input id="btn" type="button" value="C" onclick="limpar()"></th>
+                    <th><input id="btn" type="button" value="/" onclick="clicou('/')"></th>
+                    <th><input id="btn" type="button" value="*" onclick="clicou('*')"></th>
+                    <th><input id="btn" type="button" value="-" onclick="clicou('-')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="7" onclick="clicou(7)"></th>
+                    <th><input id="btn" type="button" value="8" onclick="clicou(8)"></th>
+                    <th><input id="btn" type="button" value="9" onclick="clicou(9)"></th>
+                    <th><input id="btn" type="button" value="+" onclick="clicou('+')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="4" onclick="clicou(4)"></th>
+                    <th><input id="btn" type="button" value="5" onclick="clicou(5)"></th>
+                    <th><input id="btn" type="button" value="6" onclick="clicou(6)"></th>
+                    <th><input id="btn" type="button" value="." onclick="clicou('.')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="1" onclick="clicou(1)"></th>
+                    <th><input id="btn" type="button" value="2" onclick="clicou(2)"></th>
+                    <th><input id="btn" type="button" value="3" onclick="clicou(3)"></th>
+                    <th rowspan="2"><input style="height: 104px;" id="btn" type="button" value="=" onclick="calcular()"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input style="width: 104px;" id="btn" type="button" value="0" onclick="clicou(0)"></th>
+                    <th><input id="btn" type="button" value="," onclick="clicou(',')"></th>
+                </tr>   
+                
+                
+                
+            </table>
+        </div>
+        
+    </section>
+    <div id="box-btn">
+        <div id="body-btn" onclick="mudacalc()">
+            <div id="btn-calc">
+            </div>    
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Paulo Augusto</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
