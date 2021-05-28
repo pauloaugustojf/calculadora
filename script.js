@@ -1,38 +1,32 @@
-let divout = document.getElementById('divoutput')
-let txtbox = document.getElementById('txtbox')
-let btncalc = document.getElementById('btn-calc')
+const divout = document.getElementById('divoutput')
+const txtbox = document.getElementById('txtbox')
+const btncalc = document.getElementById('btn-calc')
+let saidaAtual = divout
+let algoritimo = ''
 let calc = false
-console.log(divout)
 
 function clicou(tecla)
 {
-    console.log(tecla)
-    divout.innerHTML += tecla
+    tecla === '^' ? exp():''
+    
+    function exp (){
+        saidaAtual.innerHTML += '<sup id = "exp" contenteditable = "true"> </sup> '
+        
+        var listaExp = document.querySelectorAll('sup#exp')
+        saidaAtual = [...listaExp].pop()
+        tecla = ''
+    }
+    saidaAtual.innerHTML += tecla
 }
+
 
 function calcular()
 {
-    divout.innerHTML = eval(divout.innerHTML)
+    var X = 10;
+    saidaAtual.innerHTML = eval(saidaAtual.innerHTML)
 }
 
 function limpar()
 {
-    divout.innerHTML = ""
-}
-
-function mudacalc()
-{
-    if(calc == false)
-    {
-        calc = true
-        btncalc.style.left = '18px'
-        btncalc.style.backgroundColor = 'green'
-    }
-    else
-    {
-        calc = false
-        btncalc.style.left = '2px'
-        btncalc.style.backgroundColor = 'red'
-    }
-    console.log('mudar calculadora')
+    divout.innerHTML = null
 }
