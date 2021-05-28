@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA BY. PAULO A.</title>
+    <title>Exercício de JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +13,27 @@
     </header>
     <section>
         <div id="divoutput" contenteditable = "true">
-            X<sup id="out">X*5412</sup>
+            
         </div>
         <div id="teclado">
+            <table id="calc2">
+                <tr>
+                    <th><input id="btn" type="button" value="(" onclick="clicou('(')"></th>
+                    <th><input id="btn" type="button" value=")" onclick="clicou(')')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="^" onclick="clicou('^')"></th>
+                    <th><input id="btn" type="button" value="­√" onclick="clicou('sqrt')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="⟵" onclick="clicou('back')"></th>
+                    <th><input id="btn" type="button" value="­%" onclick="clicou('sqrt')"></th>
+                </tr>
+                <tr>
+                    <th><input id="btn" type="button" value="±" onclick="clicou('inv')"></th>
+                    <th><input id="btn" type="button" value="­%" onclick="clicou('sqrt')"></th>
+                </tr>
+            </table>
             <table id="calc">
                 <tr>
                     <th><input id="btn" type="button" value="C" onclick="limpar()"></th>
@@ -50,15 +68,6 @@
                 
             </table>
         </div>
-        
-    </section>
-    <div id="box-btn">
-        <div id="body-btn" onclick="mudacalc()">
-            <div id="btn-calc">
-            </div>    
-        </div>
-    </div>
-
     <footer>
         <p>&copy; Paulo Augusto</p>
     </footer>
